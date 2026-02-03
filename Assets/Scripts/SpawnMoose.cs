@@ -24,7 +24,7 @@ public class SpawnMoose : MonoBehaviour
             Spawn();
         }
     }
-    f
+    
     public void Spawn()
     {
         Vector2 spawnPos = Random.insideUnitCircle * 5;
