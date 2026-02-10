@@ -1,14 +1,12 @@
-using TMPro;
 using UnityEngine;
 
-public class moth1info : MonoBehaviour
+public class Despawner : MonoBehaviour
 {
-
-    public TextMeshProUGUI info;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //gameObject is the Game Object that this script is attached to
+        Destroy(gameObject, 3);
     }
 
     // Update is called once per frame
