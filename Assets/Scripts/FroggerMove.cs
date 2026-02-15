@@ -40,12 +40,14 @@ public class FroggerMove : MonoBehaviour
             transform.position += transform.right * speed * Time.deltaTime;
         }
 
-        if(pos.y > 4)
+        //activating win screen
+        if(pos.y > 2.5)
         {
             win.SetActive(true);
         }
+        else
         {
-
+            win.SetActive(false);
         }
     }
 }
