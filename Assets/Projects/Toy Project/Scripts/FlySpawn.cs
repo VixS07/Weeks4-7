@@ -27,7 +27,7 @@ public class FlySpawn : MonoBehaviour
         //get fly pos
         Vector2 flyPos = transform.position;
 
-        if (t >= 2 && flies.Count <= 100)
+        if (t >= 1.5 && flies.Count <= 100)
         {
             //spawn at random pos
             flyPos.x = Random.Range(bottomLeft.x-1, topRight.x+1);

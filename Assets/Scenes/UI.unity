@@ -2502,12 +2502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112dc6ccaecfd5446b170c8cf24b5017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyHealth: {fileID: 0}
-  flyPrefab: {fileID: 6203683657302075923}
-  spawnedFly: {fileID: 0}
-  flies: []
-  t: 0
-  speed: 2
 --- !u!4 &1325350184
 Transform:
   m_ObjectHideFlags: 0
@@ -3417,6 +3411,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1044905218121933148, guid: e571ebb15fdde9e4f90fe58e73b1ad3b, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3943083458568923118, guid: e571ebb15fdde9e4f90fe58e73b1ad3b, type: 3}
       propertyPath: m_Camera
       value: 
@@ -3478,11 +3476,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e571ebb15fdde9e4f90fe58e73b1ad3b, type: 3}
---- !u!1 &6203683657302075923 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5881828253543453827, guid: e571ebb15fdde9e4f90fe58e73b1ad3b, type: 3}
-  m_PrefabInstance: {fileID: 1679280199984561107}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
