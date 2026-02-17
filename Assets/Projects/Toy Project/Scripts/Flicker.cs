@@ -22,6 +22,6 @@ public class Flicker : MonoBehaviour
         }
 
         //change the color of the sprite based on the curve and time
-        GetComponent<SpriteRenderer>().color = new Color(curve.Evaluate(t), curve.Evaluate(t), curve.Evaluate(t));
+        GetComponent<SpriteRenderer>().color = new Color(curve.Evaluate(t), curve.Evaluate(t), curve.Evaluate(t), curve.Evaluate(t));
     }
 }
