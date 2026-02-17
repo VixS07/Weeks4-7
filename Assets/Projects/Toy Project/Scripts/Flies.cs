@@ -42,11 +42,13 @@ public class Flies : MonoBehaviour
         //set a random rotation
         if (t > 3)
         {
+            //random speed between -3 and 3 for both x and y
             speedX = Random.Range(-3, 4);
             speedY = Random.Range(-3, 4);
             Vector3 newRotation = transform.eulerAngles;
             newRotation.z += Random.Range(0, 360);
             transform.eulerAngles = newRotation;
+            //reset time
             t = 0;
         }
 

@@ -60,6 +60,7 @@ public class FlySpawn : MonoBehaviour
                 GameObject bug = bugs[i];
                 bugs.Remove(bug);
                 Destroy(bug);
+                //if its a fly, add to the flies killed, if its a moth, add to the moths killed and subtract from flies killed (flies killed is the score, so killing a moth lowers the score)
                 if (isFly)
                 {
                     fliesKilled += 20;
