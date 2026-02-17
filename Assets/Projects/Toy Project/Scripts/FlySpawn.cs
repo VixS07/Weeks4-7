@@ -3,12 +3,15 @@ using UnityEngine;
 
 public class FlySpawn : MonoBehaviour
 {
-    public GameObject flyPrefab;
-    public GameObject spawnedFly;
-    public List<GameObject> flies;
+    public GameObject bugPrefab;
+    public GameObject spawnedBug;
+    public List<GameObject> bugs;
     public float t;
-    public Flies flyScript;
+    public float spawnRate;
+    public Flies bugScript;
     public int fliesKilled;
+    public int mothsKilled;
+    public bool isFly;
     Vector2 bottomLeft;
     Vector2 topRight;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,35 +30,44 @@ public class FlySpawn : MonoBehaviour
         t += Time.deltaTime;
 
         //get fly pos
-        Vector2 flyPos = transform.position;
+        Vector2 bugPos = transform.position;
 
-        if (t >= 2 && flies.Count <= 100)
+        //summon bugs
+        if (t >= spawnRate && bugs.Count <= 100)
         {
             //spawn at random pos
-            flyPos.x = Random.Range(bottomLeft.x-1, topRight.x+1);
+            bugPos.x = Random.Range(bottomLeft.x-1, topRight.x+1);
             //make it spawn above the screen so the spawning looks organic
-            flyPos.y = topRight.y + 1;
-            transform.position = flyPos;
-            spawnedFly = Instantiate(flyPrefab, transform.position, Quaternion.identity);
-            flies.Add(spawnedFly);
+            bugPos.y = topRight.y + 1;
+            transform.position = bugPos;
+            spawnedBug = Instantiate(bugPrefab, transform.position, Quaternion.identity);
+            bugs.Add(spawnedBug);
             t = 0;
             
         }
 
-        //loop through list of flies
-        for (int i = flies.Count - 1; i >=0; i--)
+        //loop through list of bugs
+        for (int i = bugs.Count - 1; i >=0; i--)
         {
             //get the script for each item in the list
-            flyScript = flies[i].GetComponent<Flies>();
+            bugScript = bugs[i].GetComponent<Flies>();
             //check if the health is at 0 (the fly is dead)
             //if so, destory the object
-            if (flyScript.health == 0)
+            if (bugScript.health == 0)
             {
+
                 //Debug.Log(i + "dead");
-                GameObject fly = flies[i];
-                flies.Remove(fly);
-                Destroy(fly);
-                fliesKilled += 20;
+                GameObject bug = bugs[i];
+                bugs.Remove(bug);
+                Destroy(bug);
+                if (isFly)
+                {
+                    fliesKilled += 20;
+                }
+                else
+                {
+                    mothsKilled++;
+                }
             }
 
         }

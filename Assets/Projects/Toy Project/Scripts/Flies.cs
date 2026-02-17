@@ -41,8 +41,8 @@ public class Flies : MonoBehaviour
         //every 3 seconds, set a random direction using speed
         if (t > 3)
         {
-            speedX = Random.Range(-2, 3);
-            speedY = Random.Range(-2, 3);
+            speedX = Random.Range(-3, 4);
+            speedY = Random.Range(-3, 4);
             t = 0;
         }
 

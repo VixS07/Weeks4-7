@@ -5,10 +5,13 @@ using UnityEngine.UI;
 public class GameStates : MonoBehaviour
 {
     public FlySpawn flies;
-    public GameObject spawner;
+    public FlySpawn moths;
+    public GameObject flySpawner;
+    public GameObject mothSpawner;
     public int score;
     public TextMeshProUGUI scoreDisplay;
     public GameObject win;
+    public GameObject mothman;
 
     //timer
     public float t = 0;
@@ -30,14 +33,21 @@ public class GameStates : MonoBehaviour
         timerVisuals.value = t;
 
         //score updater (win screen)
-        flies = spawner.GetComponent<FlySpawn>();
+        //get flies killed
+        flies = flySpawner.GetComponent<FlySpawn>();
         score = flies.fliesKilled;
         scoreDisplay.text = score.ToString();
         //when timer is over show win screen
         if(t >= 60)
         {
-            t = t;
             win.SetActive(true);
+        }
+        //get moths killed
+        moths = mothSpawner.GetComponent<FlySpawn>();
+        //if 3 moths killed, display mothman screen
+        if(moths.mothsKilled >= 3)
+        {
+            mothman.SetActive(true);
         }
     }
 }
