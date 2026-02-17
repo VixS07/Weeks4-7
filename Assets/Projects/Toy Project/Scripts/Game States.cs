@@ -35,7 +35,7 @@ public class GameStates : MonoBehaviour
         //score updater (win screen)
         //get flies killed
         flies = flySpawner.GetComponent<FlySpawn>();
-        score = flies.fliesKilled;
+        score = flies.fliesKilled + moths.fliesKilled;
         scoreDisplay.text = score.ToString();
         //when timer is over show win screen
         if(t >= 60)
@@ -49,5 +49,19 @@ public class GameStates : MonoBehaviour
         {
             mothman.SetActive(true);
         }
+    }
+
+    public void Reset()
+    {
+        //reset timer
+        t = 0;
+        timerVisuals.value = t;
+        //reset score
+        score = 0;
+        scoreDisplay.text = score.ToString();
+        //hide win screen
+        win.SetActive(false);
+        //hide mothman screen
+        mothman.SetActive(false);
     }
 }

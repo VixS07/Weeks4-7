@@ -201,7 +201,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 79527182}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1811955002}
+        m_TargetAssemblyTypeName: FlySpawn, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1712201927}
+        m_TargetAssemblyTypeName: FlySpawn, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 613496645}
+        m_TargetAssemblyTypeName: GameStates, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &79527182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,10 +463,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 175199457}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1811955002}
+        m_TargetAssemblyTypeName: FlySpawn, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1712201927}
+        m_TargetAssemblyTypeName: FlySpawn, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 613496645}
+        m_TargetAssemblyTypeName: GameStates, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1910,7 +1970,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 450513406594273363, guid: 6439c4351ca4b234795539aa02ebc8b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2045,7 +2105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1678031782
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2174,8 +2234,8 @@ MonoBehaviour:
   bugPrefab: {fileID: 8696677569852203396, guid: 0d61d4f7ef2f03d4abea4019389d31cd, type: 3}
   spawnedBug: {fileID: 0}
   bugs: []
-  t: 0
   spawnRate: 10
+  t: 0
   bugScript: {fileID: 5161586658022723382, guid: 0d61d4f7ef2f03d4abea4019389d31cd, type: 3}
   fliesKilled: 0
   mothsKilled: 0
@@ -2242,8 +2302,8 @@ MonoBehaviour:
   bugPrefab: {fileID: 5881828253543453827, guid: e571ebb15fdde9e4f90fe58e73b1ad3b, type: 3}
   spawnedBug: {fileID: 0}
   bugs: []
-  t: 0
   spawnRate: 2
+  t: 2
   bugScript: {fileID: 0}
   fliesKilled: 0
   mothsKilled: 0

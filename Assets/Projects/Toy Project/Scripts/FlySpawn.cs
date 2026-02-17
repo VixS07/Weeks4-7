@@ -6,8 +6,8 @@ public class FlySpawn : MonoBehaviour
     public GameObject bugPrefab;
     public GameObject spawnedBug;
     public List<GameObject> bugs;
-    public float t;
     public float spawnRate;
+    public float t;
     public Flies bugScript;
     public int fliesKilled;
     public int mothsKilled;
@@ -67,9 +67,26 @@ public class FlySpawn : MonoBehaviour
                 else
                 {
                     mothsKilled++;
+                    fliesKilled -= 10;
                 }
             }
 
+        }
+    }
+
+    public void Reset()
+    {
+        //reset flies and moths killed
+        fliesKilled = 0;
+        mothsKilled = 0;
+        //reset spawn timer
+        t = 2;
+        //destroy all the bugs in the list, then clear the list
+        for (int i = bugs.Count - 1; i >= 0; i--)
+        {
+            GameObject bug = bugs[i];
+            bugs.Remove(bug);
+            Destroy(bug);
         }
     }
 }

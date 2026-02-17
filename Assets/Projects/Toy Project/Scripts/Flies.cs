@@ -86,5 +86,5 @@ public class Flies : MonoBehaviour
         }
         //update health bar
         healthBar.value = health;
-    }   
+    }
 }
