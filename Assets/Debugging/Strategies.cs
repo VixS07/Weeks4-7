@@ -21,7 +21,8 @@ public class Strategies : MonoBehaviour
             float z = 0;
 
             Instantiate(prefab, new Vector3 (x,y,z), Quaternion.identity);
-            
+
+            Instantiate(prefab, new Vector3 (x, y,z), Quaternion.identity);
         }
     }
 
